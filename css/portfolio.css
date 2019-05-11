@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: "GTLight";
+  src: url("../fonts/GTLight.woff") format("woff");
+}
+@font-face {
+  font-family: "GTBold";
+  src: url("../fonts/GTBold.woff") format("woff");
+}
+html {
+  font-family: "GTLight";
+  font-size: 23px;
+}
+h1 {
+  font-family: "GTBold";
+}
+html,body {
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+  width:100%;
+  max-width: 1080px;
+  min-width: 400px;
+  padding: 0 1rem;
+}
+/* Header */
+.branding>.wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-family: "GTBold";
+}
+.hero {
+    padding:0 0 4rem 0;
+}
+.hero h1 {font-size:72px;line-height:1.2em;margin-bottom:1rem;}
+.hero h2 {
+  font-size: 23px
+}
+/* Content */
+.pageContent {
+    flex: 1;
+    background-color:#eee;
+    position: relative;
+    width: 100%;
+}
+article header {}
+/* tabbed interface */
+.pageContent input {}
+.pageContent article{display:none;} 
+.pageContent input:checked {}
+.pageContent input:checked+label {}
+.pageContent input:checked+label+article {display:block;}
+/* tiled navigation */
+.tile {
+    display: block;
+    background-color: #fff;
+}
+.tile .details h3, .tile .details h4 {
+    margin: 0;
+    font-size: 16px;
+}
+/* Footer */
+.webFooter {
+    color: white;
+    background-color: darkslategray;
+}
+
+/* Desktop Styles */
+
+
