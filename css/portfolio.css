@@ -43,13 +43,10 @@
         flex-direction: column;
     }
     /* Header */
+    .branding {
+    display: none;
+}
     
-    .branding>.wrapper {
-        justify-content: space-between;
-        font-family: "GTBold";
-        font-size: 18px;
-        flex-direction: row;
-    }
     
     .hero {
         padding: 0 0 2rem 0;
@@ -193,6 +190,15 @@
         body {
             background-color: inherit;
         }
+        .branding {
+    display: block;
+}
+    .branding>.wrapper {
+        justify-content: space-between;
+        font-family: "GTBold";
+        font-size: 18px;
+        flex-direction: row;
+    }
         .hero {
             padding-bottom: 6em;
         }
