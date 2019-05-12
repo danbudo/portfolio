@@ -27,51 +27,106 @@ body {
 .wrapper {
   width:100%;
   max-width: 1080px;
-  min-width: 400px;
+  min-width: 300px;
   padding: 0 1rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 /* Header */
 .branding>.wrapper {
-    display: flex;
     justify-content: space-between;
     font-family: "GTBold";
+    font-size: 18px;
+    flex-direction: row;
 }
 .hero {
     padding:0 0 4rem 0;
 }
-.hero h1 {font-size:72px;line-height:1.2em;margin-bottom:1rem;}
+.hero h1 {font-size: 45px;line-height:1.2em;margin-bottom:1rem;}
 .hero h2 {
-  font-size: 23px
+  font-size: 23px;
 }
 /* Content */
 .pageContent {
     flex: 1;
-    background-color:#eee;
-    position: relative;
+    background-color: #ccc;
     width: 100%;
+    font-size: 23px;
 }
 article header {}
 /* tabbed interface */
-.pageContent input {}
-.pageContent article{display:none;} 
-.pageContent input:checked {}
-.pageContent input:checked+label {}
-.pageContent input:checked+label+article {display:block;}
+.tabs {
+  position: relative;
+  top: -2em;
+  padding-top: 4em;
+}
+.tab {width: 100%;}
+.tab label {
+  background: #eee;
+  padding: 0 1em;
+  position: absolute;
+  left: 0;
+  width: calc(50% - 0.25em);
+  line-height: 2em;
+  top: 0;
+  cursor: pointer;
+  transition:0.3s;
+  height: 2em;
+  color: #666;
+}
+.tab label:hover {
+  background-color: #ddd;
+}
+.tab label.resumeTab {
+  left: calc(50% + 0.25em);
+}
+.tab [type=radio] {
+  display: none;   
+}
+.tabContent {
+  display: none;
+  width: 100%;
+}
+[type=radio]:checked ~ label {
+  background: #cccccc;
+  color: inherit;
+}
+[type=radio]:checked ~ label ~ .tabContent {
+  display:block;
+}
 /* tiled navigation */
 .tile {
-    display: block;
+    display: flex;
     background-color: #fff;
+    padding: 2em;
+    margin-bottom:1em;
 }
-.tile .details h3, .tile .details h4 {
+.tile h3, .tile .details h3, .tile .details h4 {
     margin: 0;
     font-size: 16px;
+    text-align: left;
+}
+.details {
+    flex: 0.5;
+}
+
+.tile>h3 {
+    flex: 1;
 }
 /* Footer */
 .webFooter {
     color: white;
-    background-color: darkslategray;
+    background-color: #333;
 }
 
 /* Desktop Styles */
 
-
+@media only screen and (min-width: 600px) {
+  html {overflow-y:scroll;}
+  body {background-color: inherit;}
+  .hero h1 {
+    font-size: 69px;
+  }
+}
