@@ -196,6 +196,9 @@
         .hero h1 {
             font-size: 69px;
         }
+        .hero h2 {
+    font-size: 23px;
+}
         /* tabbed nav */
         .tabs {
             top: -2.5em;
