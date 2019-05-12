@@ -160,15 +160,20 @@
     .details {
         flex: 0.5;
         background-color: #fff;
-        padding: 1em 2em;
+        padding: 0.75em 1em;
     }
-    
-    .tile>h3 {
+     .details hr {
+         margin: 0.5em 0;
+     }
+    .tile header {
+        min-height:8em;
         flex: 1;
+    }
+    .tile header h3 {
         font-size: 23px;
-        font-family: "GTBold";
+        /* font-family: "GTBold"; */
         text-align: center;
-        line-height: 2em;
+        line-height: 3em;
     }
     /* Footer */
     
@@ -185,16 +190,30 @@
         body {
             background-color: inherit;
         }
+        .hero {
+            padding-bottom:6em;
+        }
         .hero h1 {
             font-size: 69px;
         }
         /* tabbed nav */
         .tabs {
-            padding-top: 4em;
-            top: -2em;
+            top: -2.5em;
         }
         .tab label {
             background: #eee;
             color: #666;
+            line-height: 2.5em;
+            height: 2.5em;
+        }
+        [type=radio]:checked~label:before {
+            content:none;
+        }
+        /* tiles */
+        .tile {
+            flex-direction: row;
+        }
+        .tile header {
+            min-height:12em;
         }
     }
