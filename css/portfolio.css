@@ -175,6 +175,107 @@
         text-align: center;
         line-height: 3em;
     }
+   /* Resume Page */
+#resumePage {
+    text-align:left;
+    margin-top: -0.5rem;
+}
+#resumePage > header, .resumeLowlevel {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1.5rem 0 1rem;
+    margin-top: 2rem;
+    /* border-color: #a1a1a1; */
+    /* border-top: 10px solid #a1a1a1; */
+}
+
+.resumePage > header {
+    background-color: #eee;
+}
+
+#resumePage header h2:first-child {
+    /* border-bottom: 1px solid #eee; */
+    font-size: 0;
+}
+
+header {}
+
+#resumePage > header h2 {
+    font-size: 1.25rem;
+    padding: 0 2rem;
+    margin: 0;
+}
+
+#resumePage > header > h3 {
+    margin: 0 0 1.5rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+}
+#resumePage > header > h3+h3 {
+    border-bottom:1px solid #ddd;
+    margin: 0 0 1rem;
+    padding: 0;
+    font-size:0;
+}
+
+#resumePage > header li {
+    font-size: 18px;
+    margin: 0 2rem 0.5em 1.25em;
+}
+.resumeLowlevel {
+    padding: 0 0 2rem;
+}
+.resumeLowlevel h3 {
+    font-size:1rem;
+    line-height:3em;
+    margin: 0;
+    padding: 0 2rem;
+}
+.resumeLowlevel section {
+    padding: 1rem 2rem 1.5rem;
+    border-top:1px solid #ccc;
+}
+.resumeLowlevel h4 {
+    margin:0 0 1rem;
+}
+.resumeLowlevel p {
+    font-size: 18px;
+    margin: 0 0 0.5rem;
+    line-height: 1.5em;
+}
+.resumeLowlevel p strong {
+    font-size: 18px;
+    display: inline-block;
+    width: 100%;
+    font-family: 'GTBold';
+    margin-top: 1rem;
+}
+
+.resumeLowlevel aside p {
+    margin: 0 0 0.25rem;
+    font-size: 16px;
+}
+.resumeLowlevel aside p strong {
+    border-top:none;
+    padding-top: 0;
+    font-family: 'GTLight';
+    font-size: 1rem;
+    margin-top: 0;
+}
+.resumeLowlevel p span {
+    font-family: 'GTBold';
+}
+.resumeLowlevel aside {
+    padding: 1rem 1.5rem 0.75rem;
+    border-left: 10px solid #a1a1a1;
+    background-color: #f3f3f3;
+    margin-bottom: 1rem;
+}
+
+.resumeLowlevel  aside+h4 {
+    font-size: 0;
+    margin: 0;
+}
     /* Footer */
     
     .webFooter {
