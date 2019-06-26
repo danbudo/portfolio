@@ -67,7 +67,8 @@ body {
 }
 .browseFolio>.wrapper {
     flex-direction: row;
-    justify-content:space-between
+    justify-content:space-between;
+    margin-bottom: 1rem;
 }
 .browseFolio a {
     color:#fff;
@@ -117,7 +118,6 @@ body {
     position: absolute;
     left: 0;
     width: calc(50% - 0.5rem);
-    line-height: 3em;
     top: 0;
     cursor: pointer;
     transition: 0.3s;
@@ -272,7 +272,6 @@ header {}
 }
 
 .resumeLowlevel h3 {
-    font-size: 1rem;
     line-height: 2rem;
     margin: 0;
     padding: 0 2rem;
