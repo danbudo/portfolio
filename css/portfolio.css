@@ -30,7 +30,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(209, 215, 236);
+    /* background-color: rgb(209, 215, 236); */
     /* background-color: #e4648f; */
 }
 
@@ -84,7 +84,7 @@ body {
 
 /* tabbed interface */
 
-.tabs {
+.tabbedArea {
     position: relative;
     padding-top: 4rem;
     margin-top: 0;
@@ -353,7 +353,7 @@ header {}
         font-size: 23px;
     }
     /* tabbed nav */
-    .tabs {
+    .tabbedArea {
         top: -4rem;
     }
     .tab label {
