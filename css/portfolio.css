@@ -68,7 +68,6 @@ body {
 .browseFolio>.wrapper {
     flex-direction: row;
     justify-content:space-between;
-    margin-bottom: 1rem;
 }
 .browseFolio a {
     color:#fff;
@@ -387,4 +386,32 @@ header {}
     .tile header {
         min-height: 12em;
     }
+    /* Desktop hero banner */
+	.project .hero {
+		background-image: url("../media/template/timeTrackerOverview.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 80px;
+		background-color: #df873a;
+		padding: 0;
+	}
+	.project .hero h1 {
+    text-transform: uppercase;
+    font-size: 43px;
+    line-height: 120px;
+    margin: 0;
+}
+.project .hero h1 span {
+    font-family:'GTLight';
+}
+/* Project page displays */
+.pageContent .topbar {
+    display: none;
+}
+.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 45px;}
+.pageContent .browseFolio .wrapper {
+    padding:0;
+    justify-content: center;
+}
+.pageContent .browseFolio a {display:inline-block;vertical-align:top;background-color:#222;padding: 0 0.75rem;border-radius: 0.33rem;margin-right: 0.5rem;font-size: 16px;line-height: 1.5rem;}
 }
