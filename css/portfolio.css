@@ -354,11 +354,12 @@ header {}
     .branding {
         display: block;
     }
-    .branding>.wrapper {
+    .branding .topbar {
         justify-content: space-between;
         font-family: "GTBold";
         font-size: 18px;
         flex-direction: row;
+        display: flex;
     }
     .hero {
         padding-bottom: 5.5rem;
