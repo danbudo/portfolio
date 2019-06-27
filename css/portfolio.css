@@ -72,15 +72,26 @@ body {
     line-height: 2rem;
     min-height: 2rem;
     font-size:18px;
-
+    border-top: 5px solid #fff;
 }
 .browseFolio>.wrapper {
     
 }
-.browseFolio a {
+.browseFolio .workItem {
     color:#fff;
     text-decoration:none;
+    flex-grow: 1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top:none;
+    border-bottom:none;
 }
+.workItem.active {
+    background-color: #df873a;
+    border:none;
+    border-top: 5px solid #E91E63;
+    margin-top: -5px;
+}
+
 /* Hero image */
 .hero {
     padding: 0 0 2rem 0;
@@ -417,6 +428,9 @@ header {}
     .hero {
         padding-bottom: 5.5rem;
     }
+    .project .hero {
+    min-height: 50vh;
+}
     .hero h1 {
         font-size: 69px;
     }
@@ -445,6 +459,6 @@ header {}
 	}
 	.project .hero h1 {
     font-size: 43px;
-    line-height: 120px;
+    line-height: 1.1em;
 }
 }
