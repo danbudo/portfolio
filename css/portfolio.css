@@ -14,7 +14,7 @@
 
 html {
     font-family: "GTLight";
-    font-size: 23px;
+    font-size: 16px;
 }
 
 h1 {
@@ -54,10 +54,19 @@ body {
 .webHead {
 }
 
-.branding {
-    display: none;
+.branding .browseFolio {
+    /* display: none; */
 }
 /* Navigation */
+.branding .topbar {
+        justify-content: space-between;
+        font-family: "GTBold";
+        flex-direction: row;
+        display: flex;
+    }
+.topbar h3 {
+    margin: 0.5rem;
+}
 .browseFolio {
     background-color: #222;
     line-height: 2rem;
@@ -66,8 +75,7 @@ body {
 
 }
 .browseFolio>.wrapper {
-    flex-direction: row;
-    justify-content:space-between;
+    
 }
 .browseFolio a {
     color:#fff;
@@ -213,7 +221,44 @@ body {
     text-align: center;
     line-height: 3em;
 }
-
+/* Project Page Generic Styles */
+	.project .hero {
+	    min-height: 250px;
+		background-image: url("../media/template/timeTrackerOverview.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 80px;
+		background-color: #df873a;
+		padding: 0;
+	}
+	.project .hero h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1.1em;
+    margin: 1.5rem 0;
+}
+.project .hero h1 span {
+    font-family:'GTLight';
+}
+/* Project page displays */
+.pageContent .topbar {
+    display: none;
+}
+.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 45px;}
+.pageContent .browseFolio .wrapper {
+    padding:0;
+    justify-content: center;
+}
+.pageContent .browseFolio a {
+    display:inline-block;
+    vertical-align:top;
+    background-color:#222;
+    padding: 0 0.75rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    font-size: 16px;
+    line-height: 1.5rem;
+ }
 
 /* Resume Page */
 
@@ -342,13 +387,14 @@ header {}
     background-color: rgba(51, 51, 51, 0.5);
 }
 
-
 /* Desktop Styles */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     html {
-        overflow-y: scroll;
-    }
+    overflow-y: scroll;
+    font-size: 23px;
+}
+
     body {
         /* background-color: inherit; */
     }
@@ -356,12 +402,18 @@ header {}
         display: block;
     }
     .branding .topbar {
-        justify-content: space-between;
-        font-family: "GTBold";
-        font-size: 18px;
-        flex-direction: row;
-        display: flex;
+       font-size: 18px;
     }
+    .browseFolio {
+    line-height: 2rem;
+    min-height: 2rem;
+    font-size:18px;
+
+}
+.browseFolio>.wrapper {
+    flex-direction: row;
+    justify-content:space-between;
+}
     .hero {
         padding-bottom: 5.5rem;
     }
@@ -388,32 +440,11 @@ header {}
     .tile header {
         min-height: 12em;
     }
-    /* Desktop hero banner */
-	.project .hero {
-		background-image: url("../media/template/timeTrackerOverview.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50% 80px;
-		background-color: #df873a;
-		padding: 0;
+    .project .hero {
+		
 	}
 	.project .hero h1 {
-    text-transform: uppercase;
     font-size: 43px;
     line-height: 120px;
-    margin: 0;
 }
-.project .hero h1 span {
-    font-family:'GTLight';
-}
-/* Project page displays */
-.pageContent .topbar {
-    display: none;
-}
-.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 45px;}
-.pageContent .browseFolio .wrapper {
-    padding:0;
-    justify-content: center;
-}
-.pageContent .browseFolio a {display:inline-block;vertical-align:top;background-color:#222;padding: 0 0.75rem;border-radius: 0.33rem;margin-right: 0.5rem;font-size: 16px;line-height: 1.5rem;}
 }
