@@ -20,16 +20,25 @@
   <![endif]-->
 
 <header class="webHead">
-  <section class="navigation" w3-include-html="header.html"> </section>
+  <section class="navigation">
+	<div class="wrapper">
+  <h3><a href="./index.html">Dan Hahn <span>Portfolio</span></a></h3>
+</div>
+<details class="menu"><summary><h3>My Work</h3></summary>
+<nav class="browseFolio"  w3-include-html="menu.html">
+  
+</nav>
+</details>
+	</section>
   <section class="hero">
     <div class="wrapper">
       <h1>Branding</h1>
     </div>
   </section>
 </header>
-<section class="pageContent caseStudy">
+<section class="pageContent">
   <div class="wrapper" w3-include-html="caseStudy_branding.html"></div>
-  <div class="wrapper" w3-include-html="header.html"></div>
+  <nav class="browseFolio" w3-include-html="menu.html"></nav>
 </section>
 <footer class="webFooter"  w3-include-html="footer.html"></footer>
 <script src="js/vendor/modernizr-3.7.1.min.js"></script> 

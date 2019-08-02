@@ -5,7 +5,6 @@
 <title>Dan Hahn: UX and UI Professional</title>
 <meta name="description" content="Dan Hahn UX Portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="manifest" href="site.webmanifest">
 <link rel="apple-touch-icon" href="icon.png">
 <!-- Place favicon.ico in the root directory -->
 
@@ -15,13 +14,22 @@
 <script src="https://www.w3schools.com/lib/w3.js"></script>
 </head>
 
-<body>
+<body class="home">
 <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]--> 
 <!-- content -->
 <header class="webHead">
-  <section class="branding navigation" w3-include-html="header.html"> </section>
+  <section class="navigation">
+	<div class="wrapper">
+  <h3><a href="./index.html">Dan Hahn <span>Portfolio</span></a></h3>
+</div>
+<details class="menu"><summary><h3>My Work</h3></summary>
+<nav class="browseFolio"  w3-include-html="menu.html">
+  
+</nav>
+</details>
+	</section>
   <section class="hero">
     <div class="wrapper">
       <h1>My name is <span>Dan Hahn</span>. I'm a UX designer working in London.</h1>
