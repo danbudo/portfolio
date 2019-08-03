@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-
+/* fonts */
 @font-face {
     font-family: "GTLight";
     src: url("../fonts/GTLight.woff") format("woff");
@@ -11,29 +11,30 @@
     font-family: "GTBold";
     src: url("../fonts/GTBold.woff") format("woff");
 }
-
+/* Basic setup */
 html {
     font-family: "GTLight";
-    font-size: 23px;
+    font-size: 16px;
 }
-
-h1 {
-    font-family: "GTBold";
-}
-
 html,
 body {
     height: 100%;
     min-height: 100%;
-}
-
-body {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(209, 215, 236); */
-    /* background-color: #e4648f; */
 }
-
+h1,h2 {
+    font-family: "GTBold";   
+}
+h1,h2,h3,h4 {
+    margin-top: 0;
+}
+h2 {text-transform:uppercase;margin-bottom: 0.15rem;}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* structural components */
 .wrapper {
     width: 100%;
     max-width: 1080px;
@@ -44,96 +45,100 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-
-/* Header */
-
-.webHead {
-    height: 100vh;
+.navigation>.wrapper {
+    text-align:left;
+    position: relative;
 }
-
-.branding {
-    display: none;
+.navigation {
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+    }
+.navigation h3 {
+    margin: 0;
+    font-family: "GTBold";
+    line-height: 60px;
+    height: 60px;
 }
-
+.navigation h3 span {font-family: "GTLight";}
+.browseFolio {
+    background-color: #222;
+    line-height: 2rem;
+    min-height: 2rem;
+    font-size:18px;
+}
+.workItem {
+    color:#fff;
+    text-decoration:none;
+    flex-grow: 1;
+}
+.workItem.active {
+    background-color: #df873a;
+    border:none;
+    border-top: 5px solid #E91E63;
+    margin-top: -5px;
+}
 .hero {
-    padding: 0 0 2rem 0;
-    min-height: 21rem;
+    /* padding: 0 0 2rem 0; */
+    /* min-height: 485px; */
 }
-
 .hero h1 {
     font-size: 45px;
     line-height: 1.2em;
     margin-bottom: 1rem;
 }
-
 .hero h2 {
     font-size: 19px;
 }
-
-
-/* Content */
-
 .pageContent {
     flex: 1;
-    background-color: rgba(102, 102, 102, 0.1);
-    width: 100%;
-    font-size: 23px;
+    /* background-color: rgba(102, 102, 102, 0.1); */
 }
-
-
-/* tabbed interface */
-
+.webFooter {
+    color: white;
+    background-color: rgba(34, 34, 34, 0.5);
+}
+/* Homepage - tabbed interface */
 .tabbedArea {
     position: relative;
     padding-top: 4rem;
     margin-top: 0;
 }
-
 .tab {
     width: 100%;
 }
-
 .tab label {
     padding: 0 1em;
     position: absolute;
     left: 0;
     width: calc(50% - 0.5rem);
-    line-height: 3em;
     top: 0;
     cursor: pointer;
     transition: 0.3s;
     border: 4px solid #222;
     color: #222;
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
-
 .tab label:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
-
 .tab label:before:hover {
     background-color: #666;
 }
-
 .tab label.resumeTab {
     left: calc(50% + 0.5rem);
 }
-
 .tab [type=radio] {
     display: none;
 }
-
 .tabContent {
     display: none;
     width: 100%;
 }
-
 [type=radio]:checked~label {
     background: #222222;
     color: #fff;
 }
-
 [type=radio]:checked~label:before {
     content: "";
     display: block;
@@ -145,13 +150,10 @@ body {
     width: 100%;
     left: 0;
 }
-
 [type=radio]:checked~label~.tabContent {
     display: block;
 }
-
-
-/* tiled navigation */
+/* homepage - tiled navigation */
 
 .projectChooser {
     padding-top: 1.5rem;
@@ -190,11 +192,52 @@ body {
 
 .tile header h3 {
     font-size: 23px;
-    /* font-family: "GTBold"; */
     text-align: center;
     line-height: 3em;
 }
-
+/* Project Pages */
+.caseStudy.pageContent {
+    background-color:#fff;
+    /* border-top: 10px solid #222; */
+    text-align: left;
+    display: grid;
+}
+	.project .hero>.wrapper {
+	    /* min-height: 250px; */
+	    background-image: url("../img/brandCoverImage.png");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 50% 150px;
+	    background-color: #e6e6e6;
+	    padding: 0;
+	    height: 100%;
+	}
+	.project .hero h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    line-height: 1.1em;
+    margin: 0;
+}
+.project .hero h1 span {
+    font-family:'GTLight';
+}
+/* Project page displays */
+.pageContent .topbar {
+    display: none;
+}
+.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 2rem;padding-bottom: 2rem;border-top: 1px solid rgba(34, 34, 34, 0.2);}
+.pageContent .browseFolio .wrapper {
+    padding:0;
+    justify-content: center;
+}
+.pageContent .browseFolio a {
+    background-color:#222;
+    padding: 0;
+    border-radius: 1.75rem;
+    margin: 0 0.5rem;
+    font-size: 16px;
+    line-height: 1.75rem;
+ }
 
 /* Resume Page */
 
@@ -254,7 +297,6 @@ header {}
 }
 
 .resumeLowlevel h3 {
-    font-size: 1rem;
     line-height: 2rem;
     margin: 0;
     padding: 0 2rem;
@@ -317,35 +359,38 @@ header {}
 }
 
 
-/* Footer */
-
-.webFooter {
-    color: white;
-    background-color: rgba(51, 51, 51, 0.5);
-}
-
-
 /* Desktop Styles */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     html {
-        overflow-y: scroll;
-    }
+    overflow-y: scroll;
+    font-size: 23px;
+}
+
     body {
         /* background-color: inherit; */
     }
     .branding {
         display: block;
     }
-    .branding>.wrapper {
-        justify-content: space-between;
-        font-family: "GTBold";
-        font-size: 18px;
-        flex-direction: row;
+    .branding .topbar {
+       font-size: 18px;
     }
+    .browseFolio {
+    line-height: 2rem;
+    min-height: 2rem;
+    font-size:18px;
+
+}
+.browseFolio>.wrapper {
+    flex-direction: row;
+    justify-content:space-between;
+}
     .hero {
-        padding-bottom: 5.5rem;
+        /* padding-bottom: 5.5rem; */
     }
+    .project .hero {
+}
     .hero h1 {
         font-size: 69px;
     }
@@ -369,4 +414,104 @@ header {}
     .tile header {
         min-height: 12em;
     }
+    .project .hero .wrapper {
+		/* justify-content: center; */
+		/* height: 150px; */
+	}
+	.project .hero h1 {
+    font-size: 43px;
+    line-height: 1.1em;
+}
+}
+
+/* New stuff - revise, revise, revise */
+
+.pageContent .introduction {
+    font-size: 21px;
+    text-align: left;
+    padding: 2rem 0 1rem;
+}
+
+.caseStudy {
+    font-size: 18px;
+    text-align: left;
+}
+.caseStudy h2,.caseStudy h3 {
+    margin:0;
+    font-weight: 400;
+}
+.caseStudy>header {
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+    padding:0.5rem 0 0.75rem;
+    margin-bottom:1rem;
+}
+.caseStudy h2+h3 {/* font-size:14px; */line-height: 1em;}
+.caseStudy span {
+    margin-right: 0.25em;
+}
+.caseStudy span:after {
+    content:":";
+}
+.caseStudy section h3 {
+    margin-bottom:0.5rem;
+    font-weight: 700;
+}
+p {
+    margin-top: 0;
+}
+.webHead {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 800px;
+}
+.webHead .hero {
+    flex:1;
+}
+.boxOut {
+    font-size: 16px;
+    background-color: rgba(34, 34, 34, 0.25);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.sidebar ul {
+    padding-left: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.sidebar li {}
+.sidebar h3 {
+    margin-bottom:0.5em;
+}
+/* image display*/ 
+    figure {
+        background-color:#c8c8c8;
+        margin:0;
+        padding:1rem;
+        margin-bottom:1rem;
+    }
+
+/* Drop down menu - no javascript! */
+details > summary {list-style: none;text-align: right;position: absolute;top: -60px;right: 1rem;}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary:focus {outline:none;}
+details > summary:hover {
+    cursor:pointer;
+}
+/* grid */
+.pageContent>.wrapper {display:grid;grid-template-areas: "header header" "content sidebar"  "nav nav";grid-template-columns: 1fr 0.5fr;grid-template-rows: auto auto 1fr auto;grid-gap: 1rem;text-align: left;}
+.pageContent header {
+    grid-area: header;
+}
+.pageContent .caseStudy {
+    grid-area: content;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.pageContent .browseFolio {
+    grid-area: nav;
 }
