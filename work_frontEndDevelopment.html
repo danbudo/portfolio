@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<title>Dan Hahn: UX and UI Professional</title>
+<meta name="description" content="Dan Hahn UX Portfolio">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="icon.png">
+<!-- Place favicon.ico in the root directory -->
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/portfolio.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+</head>
+
+<body class="myWork frontEndDev">
+<!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+<header class="webHead">
+  <section class="homeLink">
+    <div class="wrapper">
+      <h3><a href="./index.html">Dan Hahn <span>Portfolio</span></a></h3>
+    </div>
+  </section>
+  <section class="navigation">
+    <div class="wrapper">
+      <details class="menu" open>
+        <summary>
+          <h3>My Work</h3>
+        </summary>
+        <nav class="browseFolio"  w3-include-html="menu.html"> </nav>
+      </details>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="wrapper">
+      <h1>Front End Development</h1>
+    <img src="img/frontEndCoverImage.png" alt="laptopScreen"/> </div>
+  </section>
+</header>
+<section class="pageContent">
+  <div class="wrapper" w3-include-html="caseStudy_frontEndDevelopment.html"></div>
+  <div class="wrapper">
+    <nav class="browseFolio" w3-include-html="menu.html"></nav>
+  </div>
+</section>
+<footer class="webFooter"  w3-include-html="footer.html"></footer>
+<script src="js/vendor/modernizr-3.7.1.min.js"></script> 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+<script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')
+    </script> 
+<script src="js/plugins.js"></script> 
+<script src="js/main.js"></script> 
+<script>
+w3.includeHTML();
+</script> 
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. --> 
+<script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('set', 'transport', 'beacon');
+        ga('send', 'pageview')
+    </script> 
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
