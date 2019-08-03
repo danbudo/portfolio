@@ -189,7 +189,7 @@ a {
 
 .myWork .hero {
     background: rgb(231,231,231);
-    background: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(51,51,51,0.4) 100%);
+    /* background: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(51,51,51,0.4) 100%); */
     background-attachment: fixed;
     background-position: bottom;
 }
@@ -553,4 +553,11 @@ body {
 }
 }
 
-/* New stuff - revise, revise, revise */
+/* colours */
+.prototyping .webHead .workItem {border-color:#df863a;color:#df863a}
+.prototyping .webHead .hero,.prototyping .webHead .workItem[href*="prototyping"] {
+    background-color: #df863a;
+    color:#222;
+    font-weight:700;
+    
+}
