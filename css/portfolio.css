@@ -23,9 +23,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-h1 {
-    font-family: "GTBold";
+h1,h2 {
+    font-family: "GTBold";   
 }
+h1,h2,h3,h4 {
+    margin-top: 0;
+}
+h2 {text-transform:uppercase;margin-bottom: 0.15rem;}
 a {
     color: inherit;
     text-decoration: none;
@@ -41,29 +45,32 @@ a {
     display: flex;
     flex-direction: column;
 }
-.topbar {
+.navigation>.wrapper {
+    text-align:left;
+    position: relative;
+}
+.navigation {
         justify-content: space-between;
-        font-family: "GTBold";
-        flex-direction: row;
+        flex-direction: column;
         display: flex;
     }
-.topbar h3 {
-    margin: 0.5rem 0;
+.navigation h3 {
+    margin: 0;
+    font-family: "GTBold";
+    line-height: 60px;
+    height: 60px;
 }
+.navigation h3 span {font-family: "GTLight";}
 .browseFolio {
     background-color: #222;
     line-height: 2rem;
     min-height: 2rem;
     font-size:18px;
-    border-top: 5px solid #fff;
 }
 .workItem {
     color:#fff;
     text-decoration:none;
     flex-grow: 1;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-top:none;
-    border-bottom:none;
 }
 .workItem.active {
     background-color: #df873a;
@@ -72,8 +79,8 @@ a {
     margin-top: -5px;
 }
 .hero {
-    padding: 0 0 2rem 0;
-    min-height: 485px;
+    /* padding: 0 0 2rem 0; */
+    /* min-height: 485px; */
 }
 .hero h1 {
     font-size: 45px;
@@ -85,13 +92,11 @@ a {
 }
 .pageContent {
     flex: 1;
-    background-color: rgba(102, 102, 102, 0.1);
-    width: 100%;
-    font-size: 23px;
+    /* background-color: rgba(102, 102, 102, 0.1); */
 }
 .webFooter {
     color: white;
-    background-color: rgba(34, 34, 34, 0.5);
+    background-color: rgba(34, 34, 34, 1);
 }
 /* Homepage - tabbed interface */
 .tabbedArea {
@@ -191,23 +196,27 @@ a {
     line-height: 3em;
 }
 /* Project Pages */
-.project .pageContent {
+.caseStudy.pageContent {
     background-color:#fff;
+    /* border-top: 10px solid #222; */
+    text-align: left;
+    display: grid;
 }
-	.project .hero {
-	    min-height: 250px;
-		background-image: url("../media/template/timeTrackerOverview.png");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: 50% 80px;
-		background-color: #df873a;
-		padding: 0;
+	.project .hero>.wrapper {
+	    /* min-height: 250px; */
+	    background-image: url("../img/brandCoverImage.png");
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: 50% 150px;
+	    background-color: #e6e6e6;
+	    padding: 0;
+	    height: 100%;
 	}
 	.project .hero h1 {
     text-transform: uppercase;
     font-size: 28px;
     line-height: 1.1em;
-    margin: 1.5rem 0;
+    margin: 0;
 }
 .project .hero h1 span {
     font-family:'GTLight';
@@ -216,20 +225,18 @@ a {
 .pageContent .topbar {
     display: none;
 }
-.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 45px;}
+.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 2rem;padding-bottom: 2rem;border-top: 1px solid rgba(34, 34, 34, 0.2);}
 .pageContent .browseFolio .wrapper {
     padding:0;
     justify-content: center;
 }
 .pageContent .browseFolio a {
-    display:inline-block;
-    vertical-align:top;
     background-color:#222;
-    padding: 0 0.75rem;
-    border-radius: 8px;
-    margin-right: 0.5rem;
+    padding: 0;
+    border-radius: 1.75rem;
+    margin: 0 0.5rem;
     font-size: 16px;
-    line-height: 1.5rem;
+    line-height: 1.75rem;
  }
 
 /* Resume Page */
@@ -380,10 +387,9 @@ header {}
     justify-content:space-between;
 }
     .hero {
-        padding-bottom: 5.5rem;
+        /* padding-bottom: 5.5rem; */
     }
     .project .hero {
-    min-height: 50vh;
 }
     .hero h1 {
         font-size: 69px;
@@ -408,11 +414,114 @@ header {}
     .tile header {
         min-height: 12em;
     }
-    .project .hero {
-		
+    .project .hero .wrapper {
+		/* justify-content: center; */
+		/* height: 150px; */
 	}
 	.project .hero h1 {
     font-size: 43px;
     line-height: 1.1em;
 }
+}
+
+/* New stuff - revise, revise, revise */
+
+.pageContent .introduction {
+    font-size: 21px;
+    text-align: left;
+    padding: 2rem 0 1rem;
+}
+
+.caseStudy {
+    font-size: 18px;
+    text-align: left;
+}
+.caseStudy h2,.caseStudy h3 {
+    margin:0;
+    font-weight: 400;
+}
+.caseStudy>header {
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+    padding:0.5rem 0 0.75rem;
+    margin-bottom:1rem;
+}
+.caseStudy h2+h3 {/* font-size:14px; */line-height: 1em;}
+.caseStudy span {
+    margin-right: 0.25em;
+}
+.caseStudy span:after {
+    content:":";
+}
+.caseStudy section h3 {
+    margin-bottom:0.5rem;
+    font-weight: 700;
+}
+p {
+    margin-top: 0;
+}
+.webHead {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 800px;
+}
+.webHead .hero {
+    flex:1;
+}
+.boxOut {
+    font-size: 16px;
+    background-color: rgba(34, 34, 34, 0.25);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.sidebar ul {
+    padding-left: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.sidebar li {}
+.sidebar h3 {
+    margin-bottom:0.5em;
+}
+/* image display*/ 
+    figure {
+        background-color:#c8c8c8;
+        margin:0;
+        padding:1rem;
+        margin-bottom:1rem;
+    }
+
+/* Drop down menu - no javascript! */
+details > summary {list-style: none;text-align: right;position: absolute;top: -60px;right: 1rem;}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary:focus {outline:none;}
+details > summary:hover {
+    cursor:pointer;
+}
+/* grid */
+.pageContent>.wrapper {display:grid;grid-template-areas: "header header" "content sidebar"  "nav nav";grid-template-columns: 1fr 0.5fr;grid-template-rows: auto auto 1fr auto;grid-gap: 1rem;text-align: left;}
+.pageContent header {
+    grid-area: header;
+}
+.pageContent .caseStudy {
+    grid-area: content;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.pageContent .browseFolio {
+    grid-area: nav;
+}
+/* contact */
+.contactMe {
+    text-align: left;
+    margin: 2rem 0;
+    font-size: 18px;
+}
+
+address {
+    font-style: normal;
 }
