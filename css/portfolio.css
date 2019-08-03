@@ -6,30 +6,30 @@
     font-family: "GTLight";
     src: url("../fonts/GTLight.woff") format("woff");
 }
-
 @font-face {
     font-family: "GTBold";
     src: url("../fonts/GTBold.woff") format("woff");
 }
-/* Basic setup */
 html {
     font-family: "GTLight";
     font-size: 16px;
 }
-html,
-body {
+html, body {
     height: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: column;
 }
-h1,h2 {
-    font-family: "GTBold";   
+h1, h2 {
+    font-family: "GTBold";
 }
-h1,h2,h3,h4 {
+h1, h2, h3, h4 {
     margin-top: 0;
 }
-h2 {text-transform:uppercase;margin-bottom: 0.15rem;}
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 0.15rem;
+}
 a {
     color: inherit;
     text-decoration: none;
@@ -47,52 +47,50 @@ a {
     position: relative;
 }
 .homeLink>.wrapper {
-    text-align:left;    
+    text-align: left;
 }
 .browseFolio {
-        justify-content: space-between;
-        flex-direction: column;
-        display: flex;
-    }
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+}
 .webHead h3 {
     margin: 0;
     font-family: "GTBold";
     line-height: 60px;
     height: 60px;
     font-size: 18px;
-}.homeLink h3 span {display:none;}
-
+}
+.homeLink h3 span {
+    display: none;
+}
 .navigation {
     background-color: #222;
 }
 .workItem {
-    color:#fff;
-    text-decoration:none;
+    color: #fff;
+    text-decoration: none;
     flex-grow: 1;
     line-height: 2rem;
-    font-size:18px;
+    font-size: 18px;
 }
 .workItem.active {
     background-color: #df873a;
-    border:none;
+    border: none;
     border-top: 5px solid #E91E63;
     margin-top: -5px;
 }
 .hero {
-    /* padding: 0 0 2rem 0; */
+/* padding: 0 0 2rem 0; */
     /* min-height: 485px; */
-}
-.hero h1 {
-    font-size: 45px;
-    line-height: 1.2em;
-    margin-bottom: 1rem;
 }
 .hero h2 {
     font-size: 19px;
 }
 .pageContent {
     flex: 1;
-    /* background-color: rgba(102, 102, 102, 0.1); */
+    font-size: 21px;
+    line-height: 1.5em;
 }
 .webFooter {
     color: white;
@@ -123,7 +121,7 @@ a {
     background-color: rgba(255, 255, 255, 0.25);
 }
 .tab label:before:hover {
-    background-color: #666;
+ background-color: #666;
 }
 .tab label.resumeTab {
     left: calc(50% + 0.5rem);
@@ -158,7 +156,6 @@ a {
 .projectChooser {
     padding-top: 1.5rem;
 }
-
 .tile {
     display: flex;
     background-color: rgba(34, 34, 34, 0.15);
@@ -166,143 +163,126 @@ a {
     margin-bottom: 1.5rem;
     flex-direction: column;
 }
-
-.tile h3,
-.tile .details h3,
-.tile .details h4 {
+.tile h3, .tile .details h3, .tile .details h4 {
     margin: 0;
     font-size: 16px;
     text-align: left;
 }
-
 .details {
     flex: 0.5;
     background-color: rgba(255, 255, 255, 0.75);
     padding: 0.75em 1em;
 }
-
 .details hr {
     margin: 0.5em 0;
 }
-
 .tile header {
     min-height: 8em;
     flex: 1;
 }
-
 .tile header h3 {
     font-size: 23px;
     text-align: center;
     line-height: 3em;
 }
-/* Project Pages */
-.caseStudy.pageContent {
-    background-color:#fff;
-    /* border-top: 10px solid #222; */
-    text-align: left;
-    display: grid;
-}
-.project .hero {
-    background-color: #e6e6e6;
+/* Work Pages */
+
+.myWork .hero {
     background: rgb(231,231,231);
     background: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(51,51,51,0.4) 100%);
     background-attachment: fixed;
     background-position: bottom;
 }
-	.project .hero>.wrapper {
-	    /* min-height: 250px; */
-	    background-image: url("../img/brandCoverImage.png");
-	    background-repeat: no-repeat;
-	    background-size: contain;
-	    background-position: 50% 150px;
-	    padding: 0;
-	    height: 100%;
-	}
-	.project .hero h1 {
+.myWork .hero>.wrapper {
+    /* min-height: 250px; */
+	    /* background-image: url("../img/brandCoverImage.png"); */
+	    /* background-repeat: no-repeat; */
+	    /* background-size: contain; */
+	    /* background-position: 50%; */
+	    /* padding: 0; */
+    height: 100%;
+}
+.myWork .hero h1 {
     text-transform: uppercase;
     font-size: 28px;
     line-height: 1.1em;
     margin: 0;
 }
-.project .hero h1 span {
-    font-family:'GTLight';
+.myWork .hero h1 span {
+    font-family: 'GTLight';
 }
 /* Project page displays */
 .pageContent .topbar {
     display: none;
 }
-.pageContent .browseFolio {background-color: transparent;line-height: normal;min-height: 0;padding-top: 2rem;padding-bottom: 2rem;border-top: 1px solid rgba(34, 34, 34, 0.2);}
+.pageContent .browseFolio {
+    background-color: transparent;
+    line-height: normal;
+    min-height: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba(34, 34, 34, 0.2);
+    margin: 0;
+}
 .pageContent .browseFolio .wrapper {
-    padding:0;
+    padding: 0;
     justify-content: center;
 }
 .pageContent .browseFolio a {
-    background-color:#222;
+    background-color: #222;
     padding: 0;
     border-radius: 1.75rem;
     margin: 0 0.5rem;
     font-size: 16px;
     line-height: 1.75rem;
     text-align: center;
- }
-
+}
 /* Resume Page */
 
 #resumePage {
     text-align: left;
     margin-top: -0.5rem;
 }
-
-#resumePage>header,
-.resumeLowlevel {
+#resumePage>header, .resumeLowlevel {
     background-color: #fff;
     /* border: 1px solid #ccc; */
     padding: 1.5rem 0 1rem;
-    margin-top: 2rem;
-    /* border-color: #a1a1a1; */
+    margin-top: 2rem;/* border-color: #a1a1a1; */
     /* border-top: 10px solid #a1a1a1; */
 }
-
 .resumePage>header {
     background-color: #eee;
 }
-
 #resumePage header h2:first-child {
     /* border-bottom: 1px solid #eee; */
     font-size: 0;
 }
-
-header {}
-
+header {
+}
 #resumePage>header h2 {
     font-size: 1.25rem;
     padding: 0 2rem;
     margin: 0;
 }
-
 #resumePage>header>h3 {
     margin: 0 0 1.5rem;
     padding: 0 2rem;
     font-size: 1rem;
 }
-
 #resumePage>header>h3+h3 {
     border-bottom: 1px solid #ddd;
     margin: 0 0 1rem;
     padding: 0;
     font-size: 0;
 }
-
 #resumePage>header li {
     font-size: 18px;
     margin: 0 2rem 0.5em 1.25em;
 }
-
 .resumeLowlevel {
     padding: 0 0 2rem;
     background: transparent;
 }
-
 .resumeLowlevel h3 {
     line-height: 2rem;
     margin: 0;
@@ -310,24 +290,20 @@ header {}
     background: rgba(51, 51, 51, 0.25);
     font-size: 18px;
 }
-
 .resumeLowlevel section {
     padding: 1rem 2rem 1.5rem;
     border-top: 1px solid #ccc;
     margin: 0 0 1rem;
     background: #fff;
 }
-
 .resumeLowlevel h4 {
     margin: 0 0 1rem;
 }
-
 .resumeLowlevel p {
     font-size: 18px;
     margin: 0 0 0.5rem;
     line-height: 1.5em;
 }
-
 .resumeLowlevel p strong {
     font-size: 18px;
     display: inline-block;
@@ -335,12 +311,10 @@ header {}
     font-family: 'GTBold';
     margin-top: 1rem;
 }
-
 .resumeLowlevel aside p {
     margin: 0 0 0.25rem;
     font-size: 16px;
 }
-
 .resumeLowlevel aside p strong {
     border-top: none;
     padding-top: 0;
@@ -348,97 +322,223 @@ header {}
     font-size: 1rem;
     margin-top: 0;
 }
-
 .resumeLowlevel p span {
     font-family: 'GTBold';
 }
-
 .resumeLowlevel aside {
     padding: 1rem 1.5rem 0.75rem;
     border-left: 10px solid #E91E63;
     background-color: rgba(34, 34, 34, 0.1);
     margin-bottom: 1rem;
 }
-
 .resumeLowlevel aside+h4 {
     font-size: 0;
     margin: 0;
 }
-
+.pageContent>.wrapper {
+    text-align: left;
+}
+.pageContent .introduction {
+    padding: 2rem 0 0;
+}
+.caseStudy h2, .caseStudy h3 {
+    margin: 0;
+    font-weight: 400;
+}
+.caseStudy>header {
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    padding: 0.5rem 0 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+.caseStudy h2+h3 {/* font-size:14px; */
+    line-height: 1em;
+}
+.caseStudy span {
+    margin-right: 0.25em;
+}
+.caseStudy span:after {
+    content: ":";
+}
+.caseStudy section h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    font-size: 21px;
+}
+p {
+    margin-top: 0;
+}
+.webHead {
+    display: block;
+}
+.webHead .hero {
+    flex: 1;
+}
+.hero img {
+    width: 100%;
+    height: auto;
+}
+.sidebar {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+.boxOut {
+    /* font-size: 16px; */
+    background-color: rgba(34, 34, 34, 0.25);
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+.sidebar ul {
+    padding-left: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.sidebar li {
+    margin-bottom: 0.5em;
+    line-height: 1.3em;
+}
+.sidebar h2 {
+    border-bottom: 1px solid #222;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 18px;
+}
+.sidebar h3 {
+    margin-bottom: 0.3em;
+    font-size: 1em;
+}
+/* image display*/ 
+figure {
+    background-color: #c8c8c8;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+/* Drop down menu - no javascript! */
+details > summary {
+    list-style: none;
+    text-align: right;
+    position: absolute;
+    top: -60px;
+    right: 1rem;
+}
+details > summary::-webkit-details-marker {
+ display: none;
+}
+details > summary:focus {
+    outline: none;
+}
+details > summary:hover {
+    cursor: pointer;
+}
+/* contact */
+.contactMe {
+    text-align: left;
+    margin: 4rem 0;
+    font-size: 18px;
+    border-left: 10px solid white;
+    padding-left: 1rem;
+}
+address {
+    font-style: normal;
+}
 
 /* Desktop Styles */
 
 @media only screen and (min-width: 800px) {
-    html {
+html {
     overflow-y: scroll;
     font-size: 23px;
 }
-
-    body {
-        /* background-color: inherit; */
-    }
-    .branding {
-        display: block;
-    }
-    .branding .topbar {
-       font-size: 18px;
-    }
-    .homeLink h3 span {font-family: "GTLight";display: inline;}
-    .browseFolio {
+body {
+}
+.webHead {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 5rem);
+    min-height: 800px;
+}
+.branding {
+    display: block;
+}
+.branding .topbar {
+    font-size: 18px;
+}
+.homeLink h3 span {
+    font-family: "GTLight";
+    display: inline;
+}
+.browseFolio {
     flex-direction: row;
-    justify-content:space-between;
+    justify-content: space-between;
 }
-    .hero {
-        /* padding-bottom: 5.5rem; */
-    }
-    .project .hero {
+.hero {
+/* padding-bottom: 5.5rem; */
 }
-    .hero h1 {
-        font-size: 69px;
-    }
-    .hero h2 {
-        font-size: 23px;
-    }
-    /* tabbed nav */
-    .tabbedArea {
-        top: -4rem;
-    }
-    .tab label {
-        background: transparent;
-    }
-    [type=radio]:checked~label:before {
-        content: none;
-    }
-    /* tiles */
-    .tile {
-        flex-direction: row;
-    }
-    .tile header {
-        min-height: 12em;
-    }
-    .project .hero .wrapper {
-		/* justify-content: center; */
+.hero h1 {
+    font-size: 45px;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
+}
+.hero h1 {
+    font-size: 69px;
+}
+.hero h2 {
+    font-size: 23px;
+}
+/* tabbed nav */
+.tabbedArea {
+    top: -4rem;
+}
+.tab label {
+    background: transparent;
+}
+[type=radio]:checked~label:before {
+    content: none;
+}
+/* tiles */
+.tile {
+    flex-direction: row;
+}
+.tile header {
+    min-height: 12em;
+}
+.myWork .hero .wrapper {
+/* justify-content: center; */
 		/* height: 150px; */
-	}
-	.workItem {border-left:1px solid #fff}
-	.workItem:last-child {border-right:1px solid #fff}
-	.project .hero h1 {
-    font-size: 3rem;
+}
+.workItem {
+    border-left: 1px solid #fff
+}
+.workItem:last-child {
+    border-right: 1px solid #fff
+}
+.myWork .hero h1 {
+    font-size: 2rem;
     line-height: 6.5rem;
     margin: 0;
 }
-.introduction {font-size: 21px;}
+.introduction {
+    font-size: 23px;
+}
 .introduction:first-letter {
-    /*float:left;
+/*float:left;
   font-family: 'GTBold';
   font-size:70px;*/
 
- }
+}
 .caseStudy {
-    font-size: 18px;
+/* font-size: 18px; */
 }
 /* grid */
-.pageContent>.wrapper:first-child {display:grid;grid-template-areas: "header header" "content sidebar"  "nav nav";grid-template-columns: 75% 25%;grid-template-rows: auto auto 1fr auto;grid-gap: 2rem;text-align: left;}
+.pageContent>.wrapper:first-child {
+    display: grid;
+    grid-template-areas: "header header" "content sidebar" "nav nav";
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto auto 1fr auto;
+    grid-gap: 2rem;
+    text-align: left;
+}
 .pageContent header {
     grid-area: header;
 }
@@ -454,93 +554,3 @@ header {}
 }
 
 /* New stuff - revise, revise, revise */
-.pageContent>.wrapper {text-align:left;}
-.pageContent .introduction {
-    
-    text-align: left;
-    padding: 2rem 0 1rem;
-}
-
-
-.caseStudy h2,.caseStudy h3 {
-    margin:0;
-    font-weight: 400;
-}
-.caseStudy>header {
-    border-top:1px solid #222;
-    border-bottom:1px solid #222;
-    padding:0.5rem 0 0.75rem;
-    margin-bottom:1rem;
-}
-.caseStudy h2+h3 {/* font-size:14px; */line-height: 1em;}
-.caseStudy span {
-    margin-right: 0.25em;
-}
-.caseStudy span:after {
-    content:":";
-}
-.caseStudy section h3 {
-    margin-bottom:0.5rem;
-    font-weight: 700;
-}
-p {
-    margin-top: 0;
-}
-.webHead {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 5rem);
-    min-height: 800px;
-}
-.webHead .hero {
-    flex:1;
-}
-.boxOut {
-    font-size: 16px;
-    background-color: rgba(34, 34, 34, 0.25);
-    padding: 0.5rem 1rem;
-    margin-bottom: 1rem;
-}
-.sidebar ul {
-    padding-left: 0.75rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-.sidebar li {
-    margin-bottom: 0.4em;
-}
-.sidebar h2 {
-    border-bottom:1px solid #222;
-    padding-bottom:0.25em;
-    margin-bottom:0.5em
-}
-.sidebar h3 {
-    margin-bottom:0.5em;
-}
-/* image display*/ 
-    figure {
-        background-color:#c8c8c8;
-        margin: 2rem 0;
-        padding:1rem;
-    }
-
-/* Drop down menu - no javascript! */
-details > summary {list-style: none;text-align: right;position: absolute;top: -60px;right: 1rem;}
-details > summary::-webkit-details-marker {
-  display: none;
-}
-details > summary:focus {outline:none;}
-details > summary:hover {
-    cursor:pointer;
-}
-
-/* contact */
-.contactMe {
-    text-align: left;
-    margin: 2rem 0;
-    font-size: 18px;
-}
-
-address {
-    font-style: normal;
-}
