@@ -453,10 +453,10 @@ html {
 body {
 }
 .webHead {
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 5rem);
-    min-height: 800px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* height: calc(100vh - 5rem); */
+    /* min-height: 800px; */
 }
 .branding {
     display: block;
